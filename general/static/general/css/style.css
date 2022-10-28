@@ -1,0 +1,119 @@
+body {
+    background: #222222;
+}
+
+header {                /* шляпа */
+    width: 100vw;
+    height: 10vh;
+    position-fixed: top;
+    background-color: #484848;
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
+
+header img {            /* настройка логотипа */
+    height: 10vh;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header h3 {             /* заголовок страницы */
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Lucida Sans Unicode', 'sans-serif';
+    color: #fddb3a;
+    margin-left: 2vw;
+    position: relative;
+    top: 5px;
+    font-size: 25px;
+}
+
+.indexPageFirstGroup {  /* на главной странице левый блок */
+    display: inline-block;
+    margin-top: 10vh;
+    vertical-align: top;
+    margin-left: 23.5vw;
+    width: 25vw;
+    height: 60vh;
+    border-radius: 20px;
+    background: #484848;
+}
+
+.indexPageSecondGroup { /* на главной странице правый блок */
+    display: inline-block;
+    margin-top: 10vh;
+    vertical-align: top;
+    margin-right: 23.5vw;
+    margin-left: 5vw;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: #484848;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.indexPageFirstGroup img  { /* img about */
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.indexPageFirstGroup a { /* button about */
+    font-family: 'Lucida Sans Unicode', 'sans-serif';
+    border-radius: 10px;
+    width: 90%;
+    display: inline-block;
+    padding: 5px;
+    background: #222222;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5vh;
+    margin-left: 5%;
+    color: #fddb3a;
+    font-size: 1.6vw;
+}
+
+.indexPageFirstGroup a:hover {  /* наведение */
+    background: #fddb3a;
+    color: #222222;
+}
+
+.indexPageSecondGroup h2 { /* nameProject */
+    font-family: 'Lucida Sans Unicode', 'sans-serif';
+    color: #fddb3a;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    display: inline-block;
+    font-size: 2vw;
+}
+
+.indexPageSecondGroup img { /* logotype in second form first page */
+    display: inline-block;
+    width: 5vw;
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+.indexPageSecondGroup a {   /* button registration and enter */
+    font-family: 'Lucida Sans Unicode', 'sans-serif';
+    border-radius: 10px;
+    width: 90%;
+    display: inline-block;
+    padding-top: 15px;
+    background: #222222;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5vh;
+    margin-left: 5%;
+    color: #fddb3a;
+    font-size: 1vw;
+
+}
+
+.indexPageSecondGroup a:hover { /* наведение */
+    background: #fddb3a;
+    color: #222222;
+}

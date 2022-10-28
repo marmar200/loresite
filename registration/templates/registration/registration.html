@@ -1,0 +1,101 @@
+{% extends 'general/base.html' %}
+
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'general/css/registerOrEnter.css' %}">{% endblock %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block name_page %}ITLORE{% endblock %}
+
+{% block main %}
+    <div class="back"></div>
+    <div class="registration-form">
+        <aside>
+            <img src="{% static 'general/img/ItLoreLogoYellow.png' %}">
+            <h1>ITLORE</h1>
+            <p>Регистрация</p>
+        </aside>
+        <form>
+            {% csrf_token %}
+            <div class="input-section number-section">
+                <script src="js/jquery.maskedinput.min.js"></script>
+                {{ form.number }}
+                <script>
+                    $(".number").mask("+7(999)999-99-99");
+                </script>
+                <!-- fa fa-envelope-o"-->
+                <div class="animated-button">
+                    <span class="icon-paper-plane">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <span class="next-button number">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="input-section password-section folded">
+                {{ form.password }}
+
+                <div class="animated-button">
+                    <span class="icon-lock">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <span class="next-button password">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="input-section confirm-password-section folded">
+                {{ form.confirm_password }}
+                <div class="animated-button">
+                    <span class="icon-confirm-lock">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <span class="next-button confirm-password">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="input-section first-name-section folded">
+                {{ form.first_name }}
+                <div class="animated-button">
+                    <span class="icon-first-name">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="next-button first-name">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="input-section second-name-section folded">
+                {{ form.second_name }}
+                <div class="animated-button">
+                    <span class="icon-second-name">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="next-button second-name">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="input-section age-section folded">
+                {{ form.age }}
+                <div class="animated-button">
+                    <span class="icon-age">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="next-button age">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="success">
+                <p>ACCOUNT CREATED</p>
+            </div>
+        </form>
+    </div>
+<script src="{% static 'general/js/codeRegistration.js' %}">
+</script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'general/base.html' %}
+
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'general/css/style.css' %}">{% endblock %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block main %}
+
+    {% include 'general/header.html' %}
+
+    <section class="indexPageFirstGroup">
+        <img alt="about">
+        <a href="about">Про нас</a>
+    </section>
+
+    <section class="indexPageSecondGroup">
+        <img src="{% static 'general/img/ItLoreLogoYellow.png' %}" alt="Лого">
+        <h2>Вход ITLORE</h2>
+        <a href="registration/enter"><p>Войти</p></a>
+        <a href="registration"><p>Зарегистрироваться</p></a>
+    </section>
+{% endblock %}
