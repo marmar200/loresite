@@ -15,6 +15,7 @@ def registration(request):
             password = form.data['password'].strip()
             confirm_password = form.data['confirm_password'].strip()
 
+
     context['form'] = RegistrationForm()
     context['fail'] = fail
     return render(request, 'registration/registration.html', context)

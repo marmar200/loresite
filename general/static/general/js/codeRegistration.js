@@ -26,9 +26,13 @@
     var temp;
     $(".password").on("change keyup paste", function () {
       temp = $(this).val()
-      if ($(this).val().length == 8) {
+      if ($(this).val().length >= 8) {
+        $(".fail").css("display", "none");
         $(".icon-lock").addClass("next");
       } else {
+        $(".fail").css("display", "flex");
+        $(".fail").css("marginTop", 65);
+        document.getElementById("fail").innerHTML = "Пароль слишком легкий!";
         $(".icon-lock").removeClass("next");
       }
     });
@@ -45,8 +49,12 @@
 
     $(".confirm-password").on("change keyup paste", function () {
       if ($(this).val() == temp) {
+        $(".fail").css("display", "none");
         $(".icon-confirm-lock").addClass("next");
       } else {
+        $(".fail").css("display", "flex");
+        $(".fail").css("marginTop", 65);
+        document.getElementById("fail").innerHTML = "Пароли не совпадают!";
         $(".icon-confirm-lock").removeClass("next");
       }
     });

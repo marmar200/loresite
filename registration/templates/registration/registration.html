@@ -15,6 +15,7 @@
             <img src="{% static 'general/img/ItLoreLogoYellow.png' %}">
             <h1>ITLORE</h1>
             <p>Регистрация</p>
+            <p>Уже есть аккаунт? <a href="enter">Войти</a></p>
         </aside>
         <form>
             {% csrf_token %}
@@ -93,6 +94,9 @@
 
             <div class="success">
                 <p>ACCOUNT CREATED</p>
+            </div>
+            <div class="fail">
+                <p id="fail"></p>
             </div>
         </form>
     </div>
